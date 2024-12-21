@@ -1,3 +1,6 @@
+
+
+
 import React, { useState } from 'react';
 
 const LoginPage = () => {
@@ -40,11 +43,11 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-page">
+    <div className="  bg-gray-900 p-11">
       <h2>Login</h2>
       {submitted && <p className="success-message">Login Successful!</p>}
       <form onSubmit={handleSubmit}>
-        <div className='  bg-red-500'>
+        <div className=''>
           <label>Email:</label>
           <input
             type="text"
@@ -73,7 +76,7 @@ const LoginPage = () => {
         {/* Le bouton doit être à l'intérieur de <form>, et le <div> doit être fermé */}
         <button type="submit">Login</button>
       </form>
-      <div className=' p-4'>
+      <div className='  bg-red-700'>
         HIIIII
       </div>
     </div>
