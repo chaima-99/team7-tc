@@ -41,15 +41,22 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="   p-11">
-      <h2>Login</h2>
+    <div className=" flex md:flex-row flex-col items-center justify-center  h-screen w-full">
+     
+     <div className='w-1/3'>
+     <img src="../assets/bg_pic.png" alt="piccsss" />
+     </div>
+      
+    <div className='md:w-1/4  w-1/2' >
+    <h2 className=' text-5xl p-2 '>Log In</h2>
       {submitted && <p className="success-message">Login Successful!</p>}
       <form onSubmit={handleSubmit}>
-        <div className=''>
-          <label>Email:</label>
+        <div className='flex flex-col  p-2'>
+          <label>Email or Username</label>
           <input
             type="text"
             value={formData.email}
+            className='             border-black border-2  rounded-lg'            
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
@@ -58,10 +65,11 @@ const LoginPage = () => {
             <p style={{ color: 'red', fontSize: '14px' }}>{errors.email}</p>
           )}
         </div>
-        <div>
+        <div className='flex flex-col  p-2'>
           <label>Password:</label>
           <input
             type="password"
+            className=' border-black border-2  rounded-lg '
             value={formData.password}
             onChange={(e) =>
               setFormData({ ...formData, password: e.target.value })
@@ -72,11 +80,10 @@ const LoginPage = () => {
           )}
         </div>
         {/* Le bouton doit être à l'intérieur de <form>, et le <div> doit être fermé */}
-        <button type="submit">Login</button>
+        <button type="submit" className=' p-2  bg-slate-700 text-white  w-full'>Login</button>
       </form>
-      <div className='  bg-red-700'>
-        HIIIII
-      </div>
+    
+    </div>
     </div>
   );
 };
