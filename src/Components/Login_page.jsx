@@ -1,7 +1,5 @@
 
-
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const LoginPage = () => {
   // Initialiser l'état du formulaire
@@ -43,7 +41,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="  bg-gray-900 p-11">
+    <div className="   p-11">
       <h2>Login</h2>
       {submitted && <p className="success-message">Login Successful!</p>}
       <form onSubmit={handleSubmit}>
